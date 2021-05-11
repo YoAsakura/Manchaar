@@ -472,7 +472,7 @@ color: #fff;
     padding: 10px 20px 0 20px;
 }
 
-.timer__under-desc span{
+.timer__under-desc{
     font-size: 16px;
     line-height: 1;
     color: #fff;
@@ -572,6 +572,18 @@ color: #fff;
     line-height: 55px;
     padding: 35px 35px 0 0;
     width: 35%;
+    position: relative;
+}
+
+.games-info__left-desc::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    top: -9px;
+    right: -11px;
+    background: center center no-repeat url(../images/elca.svg);
 }
 
 .games-info__desc {
@@ -600,6 +612,18 @@ color: #fff;
     align-items: center;
     padding: 60px 30px;
     border-left: 1px solid #E1B41D;
+    position: relative;
+}
+
+.games-info__right-top-desc-box:first-child:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    top: -9px;
+    right: -11px;
+    background: center center no-repeat url(../images/elca.svg);
 }
 
 .games-info__right-top-desc-box:last-child {
@@ -655,6 +679,17 @@ color: #fff;
         margin-bottom: 30px;
     }
     
+    .games-info__left-desc::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 21px;
+        height: 22px;
+        top: -30px;
+        right: -11px;
+        background: center center no-repeat url(../images/elca.svg);
+    }
+
     .games-info__right-top-desc {
         display: flex;
         flex-direction: row;
@@ -728,7 +763,20 @@ color: #fff;
     flex-direction: row;
     justify-content: space-between;
     border-top: 1px solid #00A65A;
+    position: relative;
 }
+
+.greeting__box::after {
+position: absolute;
+content: "";
+display: block;
+width: 31px;
+height: 31px;
+top: -15.5px;
+left: 55%;
+background: center center no-repeat url(../images/romb.svg);
+}
+
 
 .greeting__left-desc {
     width: 60%;
@@ -841,6 +889,18 @@ color: #fff;
     width: 50%;
     border-top: 1px solid #F1B263;
     padding: 30px 30px 30px 0;
+    position: relative;
+}
+
+.sport__heading-box::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    top: -9px;
+    right: -11px;
+    background: center center no-repeat url(../images/elca.svg);
 }
 
 .sport__desc-box {
@@ -1193,6 +1253,18 @@ flex-direction: row;
 .programs__heading-box {
 padding-bottom: 7px;
 border-bottom: 1px solid #fff;
+position: relative;
+}
+
+.programs__heading-box::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    bottom: -16px;
+    left: -11px;
+    background: center center no-repeat url(../images/elca_white.svg);
 }
 
 .programs__heading {
@@ -1231,7 +1303,19 @@ border-bottom: 1px solid #fff;
     .programs__heading-box {
     padding-bottom: 4px;
     }
-    
+
+    .programs__heading-box::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 12px;
+        height: 13px;
+        bottom: -7px;
+        left: -11px;
+        transform: rotate(-90deg);
+        background: center center / cover no-repeat url(../images/elca_white.svg);
+    }
+
     .programs__heading {
         font-size: 25px;
         line-height: 30px;
@@ -1257,7 +1341,20 @@ margin: 0 auto;
     flex-direction: row;
     padding: 30px 0;
     border-top: 1px solid #179E6C;
+    position: relative;
 }
+
+.party__box::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    top: -9.5px;
+    left: 25%;
+    background: center center / cover no-repeat url(../images/romb.svg);
+}
+
 
 .party__desc {
     font-size: 14px;
@@ -1312,7 +1409,18 @@ height: 260px;
             flex-direction: column;
             padding: 15px 0 50px 0;
         }
-        
+
+        .party__box::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 18px;
+            height: 18px;
+            top: -9.5px;
+            left: calc(50% - 9px);
+            background: center center / cover no-repeat url(../images/romb.svg);
+        }
+
         .party__desc {
             font-size: 14px;
             margin-bottom: 20px;
@@ -1373,6 +1481,29 @@ margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.news__box::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    top: -9px;
+    left: 374px;
+    background: center center no-repeat url(../images/elca.svg);
+}
+
+.news__box::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    top: -9px;
+    left: 774px;
+    background: center center no-repeat url(../images/elca.svg);
 }
 
 .news__item {
@@ -1438,7 +1569,22 @@ margin: 0 auto;
         flex-direction: column;
         flex-wrap: wrap;
     }
+
+    .news__box::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 21px;
+        height: 22px;
+        top: -9px;
+        left: calc(50% - 10.5px);
+        background: center center no-repeat url(../images/elca.svg);
+    }
     
+    .news__box::before {
+        display: none;
+    }
+
     .news__item {
         width: 100%;
         height: 300px;
@@ -1488,6 +1634,18 @@ padding-top: 30px;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+position: relative;
+}
+
+.member__box::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    top: -9.5px;
+    left: calc(50% - 9px);
+    background: center center / cover no-repeat url(../images/romb.svg);
 }
 
 .member-item {
@@ -1516,6 +1674,18 @@ justify-content: space-between;
     font-weight: 400;
     border-bottom: 1px solid #fff;
     color: #fff;
+    position: relative;
+}
+
+.member-item h3::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    bottom: -16px;
+    left: -11px;
+    background: center center no-repeat url(../images/elca_white.svg);
 }
 
 @media (max-width: 500px) { 
@@ -1543,6 +1713,18 @@ justify-content: space-between;
     .member-item h3 {
         font-size: 14px;
         padding-bottom: 6px;
+    }
+
+    .member-item h3::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 12px;
+        height: 13px;
+        bottom: -7px;
+        left: -11px;
+        transform: rotate(-90deg);
+        background: center center / cover no-repeat url(../images/elca_white.svg);
     }
 }
 
@@ -1575,6 +1757,18 @@ justify-content: space-between;
      justify-content: space-between;
      flex-wrap: wrap;
      padding-top: 50px;
+     position: relative;
+}
+
+.partners__box::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    top: -9px;
+    right: -11px;
+    background: center center no-repeat url(../images/elca.svg);
 }
 
 @media (max-width: 500px) { 
@@ -1662,6 +1856,29 @@ padding-top: 30px;
     position: relative;
     border: 1px solid #E1B41D;
     border-bottom: none;
+    position: relative;
+}
+
+.archive__image-list-item::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    top: -9px;
+    right: -11px;
+    background: center center no-repeat url(../images/elca.svg);
+}
+
+.archive__image-list-item:last-child:after {
+    position: absolute;
+    content: "";
+    display: none;
+    width: 21px;
+    height: 22px;
+    top: -9px;
+    right: -11px;
+    background: center center no-repeat url(../images/elca.svg);
 }
 
 .archive__image-list-item p{
@@ -1732,7 +1949,29 @@ padding-top: 30px;
     .archive__image-list-item:last-child {
         margin-bottom: 0;
     }
-    
+
+    .archive__image-list-item::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 21px;
+        height: 22px;
+        top: -9px;
+        right: calc(50% - 10.5px);
+        background: center center no-repeat url(../images/elca.svg);
+    }
+
+    .archive__image-list-item:last-child:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 21px;
+        height: 22px;
+        top: -9px;
+        right: calc(50% - 10.5px);
+        background: center center no-repeat url(../images/elca.svg);
+    }
+
     .archive__image-list-item p{
        font-size: 25px;
        text-align: left;
@@ -1796,6 +2035,18 @@ padding-top: 30px;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+position: relative;
+}
+
+.contacts__box::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    top: -9px;
+    left: 40%;
+    background: center center no-repeat url(../images/elca_white.svg);
 }
 
 .contacts__left-desc{
@@ -1880,7 +2131,18 @@ justify-content: space-between;
     padding-top: 20px;
     flex-direction: column;
     }
-    
+
+    .contacts__box::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 21px;
+        height: 22px;
+        top: -9px;
+        left: calc(50% - 10.5px);
+        background: center center no-repeat url(../images/elca_white.svg);
+    }
+
     .contacts__left-desc{
         width: 100%;
         margin-bottom: 40px;
