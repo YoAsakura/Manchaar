@@ -1866,8 +1866,9 @@ padding-top: 30px;
     width: 21px;
     height: 22px;
     top: -9px;
-    right: -11px;
+    right: -11.5px;
     background: center center no-repeat url(../images/elca.svg);
+    z-index: 3;
 }
 
 .archive__image-list-item:last-child:after {
