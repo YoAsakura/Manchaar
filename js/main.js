@@ -1,4 +1,3 @@
-
 const menuBtn = document.querySelector(".page-header__mobile-menu-open");
 const menu = document.querySelector(".page-header__nav");
 
@@ -17,6 +16,22 @@ menuBtn.addEventListener('click', function() {
 function hidden() {
     menu.classList.add('none')
 }
+
+function fixHeader() {
+/* Фиксированная шапка */
+let header = document.querySelector('.page-header');
+let headerHeight = header.offsetHeight;
+
+if (window.scrollY > headerHeight) {
+    menu.classList.add('page-header__nav-sticky');
+} else {
+    menu.classList.remove('page-header__nav-sticky');
+}
+}
+  
+setInterval(fixHeader,500)
+
+console.log(window.scrollY)
 
 /* Слайдер */
 
