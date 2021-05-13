@@ -70,7 +70,6 @@ p {
     background: center center / cover no-repeat url("./images/page-header-main-back.png");
     min-width: 1440px;
     width: 100%;
-   padding-top: 40px;
 }
 
 .page-header__wrapper {
@@ -152,7 +151,6 @@ p {
 
 .page-header__index-desc-box {
     padding-top: 200px;
-    padding-left: 170px;
     color: #fff;
 }
 
@@ -945,6 +943,11 @@ background: center center no-repeat url(./images/romb.svg);
     font-weight: 400;
 }
 
+.sport__desc {
+    font-size: 14px;
+    line-height: 22px;
+}
+
 .sport__slider {
     position: relative;
 }
@@ -1264,12 +1267,6 @@ display: flex;
 flex-direction: row;
 }
 
-.programs__box {
-    position: relative;
-    width: 50%;
-    padding: 200px 150px 80px 135px;
-}
-
 .programs__image-back {
     position: absolute;
     top: 0;
@@ -1292,9 +1289,10 @@ position: relative;
     display: block;
     width: 21px;
     height: 22px;
-    bottom: -16px;
+    bottom: -11.5px;
     left: -11px;
     background: center center no-repeat url(./images/elca_white.svg);
+    transform: rotate(-90deg);
 }
 
 .programs__heading {
@@ -1302,6 +1300,29 @@ position: relative;
     font-size: 40px;
     line-height: 55px;
     font-weight: 400;
+}
+
+.programs__box {
+    position: relative;
+    width: 50%;
+    padding: 200px 150px 80px 135px;
+}
+
+.programs__box:nth-child(2) .programs__heading{
+  text-align: right;
+}
+
+.programs__box:nth-child(2)  .programs__heading-box::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    bottom: -11.5px;
+    left: auto;
+    right: -11px;
+    background: center center no-repeat url(./images/elca_white.svg);
+    transform: rotate(90deg);
 }
 
 @media (max-width: 500px) {
@@ -1346,6 +1367,23 @@ position: relative;
         background: center center / cover no-repeat url(./images/elca_white.svg);
     }
 
+    .programs__box:nth-child(2) .programs__heading{
+        text-align: right;
+      }
+      
+      .programs__box:nth-child(2)  .programs__heading-box::after {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 12px;
+          height: 13px;
+          bottom: -7px;
+          left: auto;
+          right: -11px;
+          background: center center / cover no-repeat url(./images/elca_white.svg);
+          transform: rotate(90deg);
+      }
+
     .programs__heading {
         font-size: 25px;
         line-height: 30px;
@@ -1388,6 +1426,7 @@ margin: 0 auto;
 
 .party__desc {
     font-size: 14px;
+    line-height: 1.5;
     margin-bottom: 20px;
 }
 
@@ -1414,6 +1453,7 @@ margin: 0 auto;
     font-size: 30px;
     line-height: 35px;
     font-weight: 400;
+    margin-bottom: 15px;
 }
 
 .party__heading span{
