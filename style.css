@@ -1445,7 +1445,7 @@ margin: 0 auto;
 }
 
 .party__heading-box a{
-  align-self: flex-end;
+  align-self: flex-start;
   color: #179E6C;
 }
 
@@ -2455,5 +2455,275 @@ position: relative;
         display: flex;
         flex-direction: row;
         margin-bottom: 0;
+    }
+}
+
+/* 
+
+Стили страницы контактов 
+_________________________
+
+*/
+
+/* Блок контактные данные */
+
+.contacts-page {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.contacts-page__wrapper {
+    min-width: 1440px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.contacts-page__box {
+    border-top: 1px solid #E1B41D;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+.contacts-page__right-desc {
+    display: flex;
+    flex-direction: row;
+}
+
+.contacts-page__left-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    border-right: 1px solid #E1B41D;
+    position: relative;
+}
+
+.contacts-page__left-desc::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    top: -9px;
+    right: -11px;
+    background: center center no-repeat url(./images/elca.svg);
+}
+
+.contacts-page__desc-heading {
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.contacts-page__right-desc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 40px 30px 0 30px;
+    width: 60%;
+}
+
+.contacts-page__item {
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+    margin-bottom: 60px;
+}
+
+.contacts-page__item img{
+    width: auto;
+    margin-right: 45px;
+}
+
+/* Блок контакты */
+
+.contacts-page-form {
+    width: 100%;
+    position: relative;
+}
+
+.contacts-page-form::after {
+    content: "";
+    width: 100%;
+    min-width: 1440px;
+    height: 100%;
+    background-color: #A65F4C;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    z-index: -2;
+}
+
+.contacts-page-form::before {
+    content: "";
+    width: 100%;
+    min-width: 1440px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: center center / cover no-repeat url(./images/contacts-back.png);
+    display: block;
+    position: absolute;
+    z-index: -3;
+}
+
+.contacts-page-form__wrapper {
+min-width: 1440px;
+max-width: 1440px;
+padding: 55px 135px 100px 135px;
+margin: 0 auto;
+color: #fff;
+}
+
+.contacts-page-form__box {
+border-top: 1px solid #fff;
+padding-top: 30px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+position: relative;
+}
+
+.contacts-page-form__box::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 21px;
+    height: 22px;
+    top: -9px;
+    left: 40%;
+    background: center center no-repeat url(./images/elca_white.svg);
+}
+
+.contacts-page-form__left-desc{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts-page-form__left-desc h3 {
+    font-size: 40px;
+    line-height: 55px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contacts-page-form__left-desc a {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contacts-page-form__right-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts-page-form__right-form h3{
+    font-size: 40px;
+    line-height: 55px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contacts-page-form__input {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1;
+    padding-bottom: 10px;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    outline: 0;
+    margin-bottom: 50px;
+}
+
+.contacts-page-form__input::placeholder {
+    font-size: 16px;
+    line-height: 1;
+    color: #C59889;
+}
+
+.contacts-page-form__btn-submit {
+    width: 270px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) { 
+    
+    .contacts-page-form::after {
+        min-width: 375px;
+    }
+    
+    .contacts-page-form::before {
+        min-width: 375px;
+    }
+    
+    .contacts-page-form__wrapper {
+    min-width: 375px;
+    padding: 50px 20px 80px 20px;
+    }
+    
+    .contacts-page-form__box {
+    padding-top: 20px;
+    flex-direction: column;
+    }
+
+    .contacts-page-form__box::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 21px;
+        height: 22px;
+        top: -9px;
+        left: calc(50% - 10.5px);
+        background: center center no-repeat url(./images/elca_white.svg);
+    }
+
+    .contacts-page-form__left-desc{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .contacts-page-form__left-desc h3 {
+        font-size: 25px;
+    }
+    
+    .contacts-page-form__left-desc a {
+        font-size: 14px;
+    }
+    
+    .contacts-page-form__right-form {
+        width: 100%;
+    }
+    
+    .contacts-page-form__right-form h3{
+        font-size: 25px;
+        line-height: 55px;
+    }
+    
+    .contacts-page-form__input {
+        font-size: 14px;
+        padding-bottom: 5px;
+        margin-bottom: 30px;
+    }
+    
+    .contacts-page-form__input::placeholder {
+        font-size: 16px;
+        line-height: 1;
+        color: #C59889;
     }
 }
