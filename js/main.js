@@ -93,8 +93,42 @@ var x = setInterval(function() {
 const factItem = document.querySelectorAll('.competition-detail-facts__item');
 const factHiddenDesc = document.querySelectorAll('.competition-detail-facts__hidden-desc');
 const factArrow = document.querySelectorAll('.competition-detail-facts__interactive-arrow');
+const pageControl = document.querySelectorAll('.page-control__item');
+const sections = document.querySelectorAll('section:not(.schedule)');
+const sectionSchedule = document.querySelector('.schedule');
 
-var indexFact = 0;
+console.log(sections);
+
+pageControl.forEach(function(el, i) {
+i = i++;
+    el.addEventListener('click', function() {
+        pageControl.forEach(function(el) {
+            if (el.classList.contains('page-control__item--active')) {
+                el.classList.remove('page-control__item--active');
+            }
+        });
+
+
+
+        el.classList.add('page-control__item--active');
+
+        if (pageControl[0].classList.contains('page-control__item--active') == true) {
+            sections.forEach(function(el) { 
+                el.classList.remove('hidden');
+            });
+            sectionSchedule.classList.add('hidden');
+
+        } else {
+            sections.forEach(function(el) { 
+                el.classList.add('hidden');
+            });
+            
+            sectionSchedule.classList.remove('hidden');
+        }
+
+    });
+})
+
 
 factItem.forEach(function(el, i) {
     i = i++; 

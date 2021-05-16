@@ -3328,7 +3328,7 @@ _________________________
     height: 42px;
     position: absolute;
     right: 50px;
-    top: calc(50% - 40px);
+    top: 20px;
     transition: transform 0.5s ease;
 }
 
@@ -3372,6 +3372,7 @@ _________________________
     font-weight: 400;
     padding-right: 150px;
     padding-bottom: 20px;
+    overflow: hidden;
     border-bottom: 1px solid #E1B41D;
 }
 
@@ -3457,3 +3458,354 @@ _________________________
     display: none;
 }
 
+/* Расписание */
+
+.schedule {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.schedule__wrapper {
+  max-width: 1440px;
+  min-width: 1440px;
+  padding: 0 135px 0;
+  margin: 0 auto;
+  color: #000;
+}
+
+.schedule__box {
+  border-bottom: 1px solid #E1B41D;
+}
+
+.schedule__top-box-heading {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.schedule__left-name {
+  position: relative;
+  width: 50%;
+  padding: 30px;
+  border-right: 1px solid #E1B41D;
+  border-bottom: 1px solid #E1B41D;
+  border-top: 1px solid #E1B41D;
+}
+
+.schedule__left-name::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 21px;
+  height: 22px;
+  top: -9px;
+  right: -11px;
+  background: center center no-repeat url(./images/elca.svg);
+}
+
+.schedule__right-time {
+  width: 50%;
+  padding: 30px;
+  border-bottom: 1px solid #E1B41D;
+  border-top: 1px solid #E1B41D;
+}
+
+.schedule__right-date {
+  width: 585.8px;
+  margin-left: auto;
+  border-left: 1px solid #E1B41D;
+}
+
+.schedule__date {
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 20px;
+}
+
+.schedule__time {
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.schedule__time:last-child {
+  margin-bottom: 0;
+}
+
+.schedule__heading {
+  font-size: 40px;
+  line-height: 55px;
+  font-weight: 400;
+}
+
+.schedule__time-box {
+  width: 100%;
+  padding: 20px;
+}
+
+.schedule__time-box:not(:last-child) {
+  border-bottom: 1px solid #E1B41D;
+}
+
+@media (max-width: 500px) { 
+
+.page-header--competition-detail {
+  margin-bottom: 40px;
+  padding: 20px 0 0;
+}
+
+.competition-detail {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.page-header-detail__wrapper {
+  min-width: 375px;
+  padding: 0 20px 0;
+}
+
+.page-header-detail__wrapper img{
+  width: 100%;
+  height: 160px;
+  margin-top: 50px;
+}
+
+.competition-detail__wrapper {
+  min-width: 375px;
+}
+
+.page-control {
+  min-width: 375px;
+  padding: 0 0 25px;
+}
+
+.page-control__box {
+  margin: 0 auto;
+  width: 335px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.page-control__item {
+    width: 150px;
+    padding-bottom: 10px;
+}
+
+.page-control__item p{
+ font-size: 12px;
+}
+
+.page-control__item--active p{
+  color: #000;
+}
+
+.competition-slider {
+    margin: 40px 0 40px;
+}
+
+.competition__slider-wrapper {
+  min-width: 375px;
+  padding: 0 20px 0;
+}
+
+.competition-slider__img , .competition-slider__img img{
+  max-height: 150px;
+}
+
+.competition-detail__heading-box {
+  width: 100%;
+  border-top: none;
+  border-right:none;
+  padding: 0 0 10px 0;
+}
+
+.competition-detail__desc-box {
+  border-top: 1px solid #f1b263;
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+
+.competition-detail__heading-box::after {
+  display: none;
+}
+
+.competition-detail-facts {
+  margin: 40px 0 40px;
+}
+
+.competition-detail-fats__wrapper {
+  min-width: 375px;
+  padding: 0 20px 0;
+}
+
+.competition-detail-facts__box {
+  padding: 20px 0 20px;
+}
+
+.competition-detail-facts__item {
+  margin-bottom: 20px;
+}
+
+.competition-detail-facts__interactive-arrow {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  top: 65px;
+  transition: transform 0.5s ease;
+}
+
+.competition-detail-facts__interactive-arrow::after {
+  content: '';
+  width: 13px;
+  height: 2px;
+  top: 10px;
+  left: 0px;
+  border-radius: 50px;
+}
+
+.competition-detail-facts__interactive-arrow::before {
+  content: '';
+  width: 13px;
+  height: 2px;
+  top: 10px;
+  right: 0px;
+  border-radius: 50px;
+}
+
+.competition-detail-facts__up-desc {
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  padding-right: 50px;
+}
+
+.competition-detail-facts__hidden-desc {
+  font-size: 14px;
+  line-height: 22px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E1B41D;
+}
+
+.photo-archive {
+  width: 100%;
+  position: relative;
+}
+
+.photo-archive__heading {
+  font-size: 25px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.photo-archive::after {
+  min-width: 375px;
+}
+
+.photo-archive::before {
+  min-width: 375px;
+}
+
+.photo-archive__wrapper {
+  min-width: 375px;
+  padding: 50px 20px 50px;
+}
+
+.photo-archive__box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.photo-archive__item {
+  width: 100%;
+  height: 270px;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.photo-archive__item img{
+  height: 210px;
+  margin-bottom: 10px;
+}
+
+.competition-detail-facts__interactive-arrow--open {
+  transform: rotate(180deg);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Расписание */
+
+.schedule {
+margin-top: 40px;
+margin-bottom: 40px;
+}
+
+.schedule__wrapper {
+min-width: 375px;
+padding: 0 20px 0;
+}
+
+.schedule__box {
+border-bottom: 1px solid #E1B41D;
+}
+
+.schedule__top-box-heading {
+display: flex;
+flex-direction: row;
+
+}
+
+.schedule__left-name {
+position: relative;
+width: 50%;
+padding: 15px;
+}
+
+.schedule__left-name::after {
+display: none;
+}
+
+.schedule__right-time {
+width: 50%;
+padding: 15px;
+}
+
+.schedule__right-date {
+width: 167.8px;
+}
+
+.schedule__date {
+font-size: 20px;
+line-height: 1;
+margin-bottom: 10px;
+}
+
+.schedule__time {
+font-size: 14px;
+line-height: 1;
+margin-bottom: 10px;
+}
+
+.schedule__heading {
+font-size: 20px;
+line-height: 1;
+}
+
+.schedule__time-box {
+width: 100%;
+padding: 15px;
+}
+
+.schedule__time-box:not(:last-child) {
+border-bottom: 1px solid #E1B41D;
+}
+
+}
