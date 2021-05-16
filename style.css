@@ -3235,6 +3235,7 @@ _________________________
       width: 250px;
       padding-bottom: 10px;
       border-bottom: 1px solid #C4C4C4;
+      cursor: pointer;
   }
 
   .page-control__item p{
@@ -3319,6 +3320,7 @@ _________________________
 .competition-detail-facts__item {
     margin-bottom: 50px;
     position: relative;
+    cursor: pointer;
 }
 
 .competition-detail-facts__interactive-arrow {
