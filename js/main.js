@@ -31,8 +31,6 @@ if (window.scrollY > headerHeight) {
   
 setInterval(fixHeader,500)
 
-console.log(window.scrollY)
-
 /* Слайдер */
 
 const slideArr = document.querySelectorAll('.slider__item');
@@ -91,3 +89,18 @@ var x = setInterval(function() {
     + minutes + " : " + seconds;
     
 }, 1000);
+
+const factItem = document.querySelectorAll('.competition-detail-facts__item');
+const factHiddenDesc = document.querySelectorAll('.competition-detail-facts__hidden-desc');
+const factArrow = document.querySelectorAll('.competition-detail-facts__interactive-arrow');
+
+var indexFact = 0;
+
+factItem.forEach(function(el, i) {
+    i = i++; 
+
+    el.addEventListener('click', function() {
+        factArrow[i].classList.toggle('competition-detail-facts__interactive-arrow--open');
+        factHiddenDesc[i].classList.toggle('hidden');
+    });
+})

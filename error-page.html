@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Игра Манчаары</title>
+</head>
+
+<body>
+
+    <div class="page-header__mobile-menu-open">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="page-header__nav none page-header__nav--hidden page-header__nav--index">
+        <a href="index.html" class="page-header__logo-image-link" aria-label="Главная страница">
+            <img src="images/page-header-logo.png" alt="Логотип компании">
+        </a>
+        <ul class="page-header__nav-list">
+            <li class="page-header__nav-list-item"><a href="index.html" class="page-header__nav-link">Главная</a></li>
+            <li class="page-header__nav-list-item"><a href="games.html" class="page-header__nav-link">История</a></li>
+            <li class="page-header__nav-list-item"><a href="#" class="page-header__nav-link">Соревнования</a>
+            </li>
+            <li class="page-header__nav-list-item"><a href="participant.html" class="page-header__nav-link">Программа</a></li>
+            <li class="page-header__nav-list-item"><a href="#" class="page-header__nav-link">Регистрация</a>
+            </li>
+            <li class="page-header__nav-list-item"><a href="contacts.html" class="page-header__nav-link">Контакты</a></li>
+            <li class="page-header__nav-list-item"><a href="#" class="page-header__nav-link">+7 (212) 674-25-10</a></li>
+        </ul>
+    </nav>
+
+    <section class="error">
+        <img src="images/error.png" alt="">
+        <div class="error__wrapper">
+        <h1 class="error__heading">Ведутся технические работы</h1>
+        <p class="error__desc">Данная страница находится на техническом обслуживании, информация появится в ближайшее время</p>
+
+        <p class="error__desc-bottom">Игры начнутся через</p>
+
+        <div class="error-timer_box">
+            <p class="error-timer__item" id="demo"></p>
+
+            <div class="error-timer__under-desc">
+                <div>Дней</div>
+                <div>Часов</div>
+                <div>Минут</div>
+                <div>Секунд</div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <script>
+
+
+const menuBtn = document.querySelector(".page-header__mobile-menu-open");
+const menu = document.querySelector(".page-header__nav");
+
+function hidden() {
+    menu.classList.add('none')
+}
+
+menuBtn.addEventListener('click', function() {
+    menu.classList.toggle('page-header__nav--hidden');
+    menu.classList.toggle('page-header__nav--show');
+    menuBtn.classList.toggle('page-header__mobile-menu-open--opened');
+
+    if (!menu.classList.contains('page-header__nav--show')) {
+        setTimeout(hidden , 800)
+    } else {menu.classList.remove('none')
+ }
+});
+
+        /* Таймер */
+
+// Set the date we're counting down to
+var countDownDate = new Date("July 5, 2021 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+    + minutes + " : " + seconds;
+    
+}, 1000);
+    </script>
+</body>
+
+</html>
